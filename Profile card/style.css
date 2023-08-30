@@ -24,6 +24,23 @@ body{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 24px;
     padding: 25px;   
+    animation: mine 3s infinite linear 2s;
+}
+@keyframes mine{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotateY(10deg);
+        box-shadow: 1px 8px 10px rgba(0, 0, 0, 0.5);
+    }
+    50%{
+        transform: rotateY(0deg);    
+    }
+    75%{
+        box-shadow: 1px 8px 10px rgba(0, 0, 0, 0.3);
+        transform: rotateY(-10deg);
+    }
 }
 
 .img{
@@ -104,7 +121,7 @@ body{
 .profile .button{
     background-color: #4070f4;
     padding: 8px;
-    border-radius: 24px;
+    border-radius: 15px;
     margin: 0 10px;
     border: none;
     color: #fff;
@@ -116,6 +133,7 @@ body{
 .profile :is(.button:hover, .button:focus){
     background-color: #0e4bf1;
     transform: scale(1.1);
+    box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.603);
 }
 .profile .analytics{
     display: flex;
@@ -142,6 +160,7 @@ body{
 .data i:hover{
     transform: rotate(360deg);
     color: red;
+    
 }
 .profile::before{
     content: '';
